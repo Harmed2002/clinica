@@ -6,7 +6,8 @@ App de prueba que ejecuta procesos CRUD con información de Pokemones
 ## Características
 
 - Implementa PHP Laravel
-- Implementa vistas con Blade
+- Implementa diseño de vistas con Bootstrap
+- onectado a BD MySQL
 - Con repositorio público en GitHUb
 
 ## Instalación
