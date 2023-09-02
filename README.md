@@ -7,12 +7,12 @@ App de prueba que ejecuta procesos CRUD con información de Pokemones
 
 - Implementa PHP Laravel
 - Implementa diseño de vistas con Bootstrap
-- onectado a BD MySQL
-- Con repositorio público en GitHUb
+- Conectado a BD MySQL
+- Con repositorio público en GitHub
 
 ## Instalación
 
-Copiar el repo
+Copiar el repo,
 Instalar las dependencias y devDependencias y arrancar el servidor.
 
 ```
