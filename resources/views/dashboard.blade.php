@@ -91,7 +91,7 @@
                                                     <div class="row">
                                                         <div class="col-12 col-sm-12 mb-3">
                                                             <label for="imagen" class="form-label">Imagen</label>
-                                                            <input type="text" class="form-control" id="imagen" name="imagen">
+                                                            <input type="file" class="form-control" name="image" id="image" accept="image/*" >
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">

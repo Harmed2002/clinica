@@ -106,18 +106,29 @@ class InicioController extends Controller
             'attack' => "required",
             'defense' => "required",
             'speed' => "required",
-            'image' => "max:255",
+            'image' => "image|max:4096",
             // 'image' => 'image|max:4096', // Validar que sea una imagen y no supere 4 MB
         ]);
 
         try {
-            // $pokUpd = new Pokemon();
+
+            if ($request->hasFile('image')) {
+                $imagen = $request->file('image');
+                $nombreImagen = time() . '.' . $imagen->getClientOriginalExtension();
+                $imagen->storeAs('public', $nombreImagen);
+                // Storage::disk('local')->put($nombreImagen, 'Contents');
+
+            } else {
+
+                $nombreImagen = '';
+            }
+
             $pokUpd = [];
             $pokUpd['name'] = $request->name;
             $pokUpd['attack'] = $request->attack;
             $pokUpd['defense'] = $request->defense;
             $pokUpd['speed'] = $request->speed;
-            // $pokUpd->image = $nombreImagen;
+            $pokUpd['image'] = $nombreImagen;
 
             $pok = Pokemon::find($request->id);
             $pok->update($pokUpd);

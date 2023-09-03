@@ -10,7 +10,7 @@ class Pokemon extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['name', 'attack', 'defense', 'speed'];
+    protected $fillable = ['name', 'attack', 'defense', 'speed', 'image'];
 
 
 }
