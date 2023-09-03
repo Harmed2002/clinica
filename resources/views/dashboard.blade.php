@@ -48,8 +48,7 @@
                                     <td>{{ $pok['attack'] }}</td>
                                     <td>{{ $pok['defense'] }}</td>
                                     <td>{{ $pok['speed'] }}</td>
-                                    {{-- <td><img src="{{ Storage::get($pok['image']) }}" width="100" name="photo" id="photo" alt = "{{ $pok['image'] }}"></td> --}}
-                                    <td><img src="{{ asset('storage/' . $pok['image']) }}" width="100" name="photo" id="photo" alt = "{{ $pok['image'] }}"></td>
+                                    <td><img src="{{ asset('storage/' . $pok['image']) }}" width="30" height="30" name="photo" id="photo" alt = "{{ $pok['image'] }}"></td>
                                     <td>
                                         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editarModal{{ $pok['id'] }}">Editar</button>
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarModal{{ $pok['id'] }}">Eliminar</button>
@@ -90,13 +89,17 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-12 col-sm-12 mb-3">
+                                                            <img src="{{ asset('storage/' . $pok['image']) }}" width="100" height="100" name="photo" id="photo" alt = "{{ $pok['image'] }}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-12 mb-3">
                                                             <label for="imagen" class="form-label">Imagen</label>
                                                             <input type="file" class="form-control" name="image" id="image" accept="image/*" >
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        {{-- <a href="{{ route('update', ['id' => $pok['id']]) }}" class="btn btn-primary">Guardar Cambios</a> --}}
                                                         <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar Cambios</button>
                                                     </div>
                                                 </form>
